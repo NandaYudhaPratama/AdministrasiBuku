@@ -1,0 +1,49 @@
+﻿@model AdministrasiBuku.Models.Buku
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Buku</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.JudulBuku)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JudulBuku)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pengarang)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pengarang)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Penerbit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Penerbit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TahunTerbit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TahunTerbit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Jumlah)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Jumlah)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Isbn">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
