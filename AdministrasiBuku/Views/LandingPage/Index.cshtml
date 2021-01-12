@@ -15,21 +15,21 @@
 
             </div>
             <div class="col-sm card h-100 shadow p-3 bg-white rounded">
-                <form>
+                <form name="loginForm" method="post" action="~/Bukus/Index">
                     <div style="margin-left:auto;margin-right:auto; width:25%;padding-bottom:20px;">
                         <img src="~/images/profil.jpg" height="90px" width="90px">
-                        
+
                     </div>
                     <div class="form-floating mb-3">
-                        <input style= " border-radius: 40px;""email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <input style=" border-radius: 50px;" name="Username" class="form-control" id="floatingInput" placeholder="name@example.com">
                         <label for="floatingInput">Username</label>
                     </div>
                     <div class="form-floating">
-                        <input style= "border-radius: 45px;" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <input style="border-radius: 50px;" name="Password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
                         <label for="floatingPassword">Password</label>
                     </div>
                     <br />
-                    <button type="submit" class="btn btn-primary">Login</button>
+                    <input type="submit" class="btn btn-primary" onclick="return check(this.form)" value="Login">
                 </form>
             </div>
             <div class="col-sm">
@@ -37,6 +37,18 @@
             </div>
 
         </div>
+        <script language="javascript">
+            function check(form) {
 
+                if (form.Username.value == "nanda" && form.Password.value == "123") {
+                    return true;
+                }
+                else {
+                    alert("Username atau Password yang anda masukkan salah!")
+                    return false;
+                }
+            }
+        </script>
     </div>
 </body>
+
