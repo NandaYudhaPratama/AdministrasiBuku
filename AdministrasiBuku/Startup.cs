@@ -66,7 +66,7 @@ namespace AdministrasiBuku
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Bukus}/{action=Index}/{id?}");
+                    template: "{controller=LandingPage}/{action=Index}/{id?}");
             });
         }
     }

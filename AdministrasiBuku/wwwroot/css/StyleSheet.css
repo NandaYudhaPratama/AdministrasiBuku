@@ -1,0 +1,8 @@
+﻿body {
+    background-image: url('home.jpg');
+    background-position: center center;
+}
+.profil {
+    background-image: url('../../wwwroot/images/profil.webp');
+
+}
