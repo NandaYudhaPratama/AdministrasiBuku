@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<AdministrasiBuku.Models.Petugas>
 @{
     ViewData["Title"] = "Index";
     Layout = null;
@@ -8,14 +8,14 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
 
-<body style="background-image:url(/images/Home.jpg); background-repeat:no-repeat; background-size:cover";>
+<body style="background-image:url(/images/Home.jpg); background-repeat:no-repeat; background-size:cover" ;>
     <div class="container">
         <div class="row" style="margin-top:200px">
             <div class="col-sm">
 
             </div>
             <div class="col-sm card h-100 shadow p-3 bg-white rounded">
-                <form name="loginForm" method="post" action="~/Bukus/Index">
+                <form name="loginForm" method="post" action="~/Home/Index">
                     <div style="margin-left:auto;margin-right:auto; width:25%;padding-bottom:20px;">
                         <img src="~/images/profil.jpg" height="90px" width="90px">
 
@@ -40,7 +40,7 @@
         <script language="javascript">
             function check(form) {
 
-                if (form.Username.value == "nanda" && form.Password.value == "123") {
+                if (form.Username.value == "Paijo" && form.Password.value == "123") {
                     return true;
                 }
                 else {
