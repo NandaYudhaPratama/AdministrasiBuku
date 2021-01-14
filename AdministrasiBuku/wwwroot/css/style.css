@@ -1,5 +1,5 @@
-/*Bad! But hey it works in a pinch*/
-html { overflow-y: hidden; }
+
+html { overflow: scroll; }
 
 .bg1 {
     font-size: 100%;
