@@ -9,6 +9,9 @@ using AdministrasiBuku.Models;
 
 namespace AdministrasiBuku.Controllers
 {
+    /// <summary>
+    /// controller petugas
+    /// </summary>
     public class PetugasController : Controller
     {
         private readonly DbAdmBukuContext _context;
@@ -17,13 +20,20 @@ namespace AdministrasiBuku.Controllers
         {
             _context = context;
         }
-
+        /// <summary>
+        /// mendapatkan data dari petugas
+        /// </summary>
+        /// <returns></returns>
         // GET: Petugas
         public async Task<IActionResult> Index()
         {
             return View(await _context.Petugas.ToListAsync());
         }
-
+        /// <summary>
+        /// isi dari tabel petugas
+        /// </summary>
+        /// <param name="id"> berdasarkan id petugas atau primary key</param>
+        /// <returns></returns>
         // GET: Petugas/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -42,12 +52,20 @@ namespace AdministrasiBuku.Controllers
             return View(petugas);
         }
 
+        /// <summary>
+        /// input data petugas
+        /// </summary>
+        /// <returns></returns>
         // GET: Petugas/Create
         public IActionResult Create()
         {
             return View();
         }
 
+        /// <summary>
+        /// validasi
+        /// </summary>
+        /// <returns></returns>
         // POST: Petugas/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -64,6 +82,9 @@ namespace AdministrasiBuku.Controllers
             return View(petugas);
         }
 
+        /// <summary>
+        /// edit data petugas
+        /// </summary>
         // GET: Petugas/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -83,6 +104,11 @@ namespace AdministrasiBuku.Controllers
         // POST: Petugas/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        /// <summary>
+        /// validasi
+        /// </summary>
+        /// <param name="id"> berdasarkan id petugas atau primary key</param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("IdPetugas,Username,Password")] Petugas petugas)
@@ -114,7 +140,11 @@ namespace AdministrasiBuku.Controllers
             }
             return View(petugas);
         }
-
+        /// <summary>
+        /// hapus data petugas
+        /// </summary>
+        /// <param name="id">berdasarkan id petugas atau primary key</param>
+        /// <returns></returns>
         // GET: Petugas/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -133,6 +163,9 @@ namespace AdministrasiBuku.Controllers
             return View(petugas);
         }
 
+        /// <summary>
+        /// validasi
+        /// </summary>
         // POST: Petugas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

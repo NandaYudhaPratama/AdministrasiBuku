@@ -15,6 +15,9 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace AdministrasiBuku
 {
+    /// <summary>
+    /// Main Class
+    /// </summary>
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -25,6 +28,11 @@ namespace AdministrasiBuku
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+
+            /// <summary>
+            /// Koneksi database
+            /// </summary>
+            /// <param name="services">Mendapatkan koneksi ke database</param>
         public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<CookiePolicyOptions>(options =>
@@ -43,6 +51,14 @@ namespace AdministrasiBuku
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /// <summary>
+        /// Halaman pertama yang di akses ketika program di jalankan
+        /// </summary>
+        /// <remarks>
+        /// Akan menampilkan halaman dari index.cshtml dari controller LandingPage
+        /// Jika terjadi error akan menampilkan halaman error dari "/Home/Error",
+        /// </remarks>
+        /// 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())

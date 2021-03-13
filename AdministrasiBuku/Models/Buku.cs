@@ -4,6 +4,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AdministrasiBuku.Models
 {
+    /// <summary>
+    /// Buku Models
+    /// </summary>
+    /// <param>
+    /// MaxLength untuk data maksimum yang di masukkan
+    /// Required untuk syarat data yang akan di masukkan
+    /// RegularExpression untuk input data tertentu seperti angka 0 sampai 9 dan symbol ^ * $ 
+    /// </param>
     public partial class Buku
     {
         [MaxLength(13, ErrorMessage = "ISBN maksimal 13 angka")]

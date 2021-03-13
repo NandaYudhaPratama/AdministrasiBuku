@@ -7,8 +7,15 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AdministrasiBuku.Controllers
 {
+    /// <summary>
+    /// controller chart
+    /// </summary>
     public class ChartsController : Controller
     {
+        /// <summary>
+        /// mendapatkan data dari tabel buku, kemudian menampilkannya dalam bentuk chart menggunakan javascript
+        /// </summary>
+        /// <returns></returns>
         // GET: Charts
         public ActionResult Index()
         {

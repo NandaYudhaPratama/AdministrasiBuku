@@ -4,12 +4,19 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace AdministrasiBuku.Models
 {
+    /// <summary>
+    /// Db Models
+    /// </summary>
     public partial class DbAdmBukuContext : DbContext
     {
         public DbAdmBukuContext()
         {
         }
 
+        /// <summary>
+        /// Akses data buku dan petugas
+        /// </summary>
+        /// <param name="options"></param>
         public DbAdmBukuContext(DbContextOptions<DbAdmBukuContext> options)
             : base(options)
         {
@@ -18,7 +25,10 @@ namespace AdministrasiBuku.Models
         public virtual DbSet<Buku> Buku { get; set; }
         public virtual DbSet<Petugas> Petugas { get; set; }
 
-
+        /// <summary>
+        /// hasil setelah migrasi database
+        /// </summary>
+        /// <param name="modelBuilder">method ini akan terbentuk secara otomatis setelah melakukan migrasi database</param>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Buku>(entity =>

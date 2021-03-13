@@ -8,6 +8,10 @@ using AdministrasiBuku.Models;
 
 namespace AdministrasiBuku.Controllers
 {
+    /// <summary>
+    /// controller default dari asp
+    /// </summary>
+    /// <remarks>controller ini tidak di gunakan</remarks>
     public class HomeController : Controller
     {
         public IActionResult Index()
